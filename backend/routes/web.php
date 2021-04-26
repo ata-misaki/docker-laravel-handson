@@ -17,6 +17,27 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// ページ
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/news', function () {
+    return view('news');
+});
+
+// お問い合わせ
+
+
+//入力ページ
+Route::get('/contact', 'App\Http\Controllers\ContactController@index')->name('contact.index');
+
+//確認ページ
+Route::post('/contact/confirm', 'App\Http\Controllers\ContactController@confirm')->name('contact.confirm');
+
+//送信完了ページ
+Route::post('/contact/thanks', 'App\Http\Controllers\ContactController@send')->name('contact.send');

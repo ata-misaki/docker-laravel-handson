@@ -9,16 +9,13 @@
     <link rel="stylesheet" href="{{  asset('css/style.css') }}" />
 </head>
 <body>
-    
 
-    @include("parts.header")
+@extends('layout')
 
-    <div class="container">なかみ</div>
+@section('content')
+<h1>{{ __('送信完了') }}</h1>
+@endsection
 
-    
-
-    
 
 </body>
 </html>
-@include("parts.footer")

@@ -13,12 +13,11 @@
 
     @include("parts.header")
 
-    <div class="container">なかみ</div>
+    <div class="container">新着情報</div>
 
-    
+    @include("parts.footer")
 
     
 
 </body>
 </html>
-@include("parts.footer")
